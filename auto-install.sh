@@ -14,18 +14,17 @@ die() {
 [ -e "~/.vim" ] && die "~/.vim already exists."
 [ -e "~/.vimrc" ] && die "~/.vimrc already exists."
 
-if [ ! -e "~/.vimbackup" ]; then
+git clone git://github.com/billcava/vimrc.git "$VIMHOME"
+
+ln -s ~/.vim/vimrc ~/.vimrc
+
+if [ ! -e "~/$VIMHOME/.vimbackup" ]; then
     mkdir "$VIMHOME/.vimbackup"
 fi
 
-if [ ! -e "~/vimswap" ]; then
+if [ ! -e "~/$VIMHOME/.vimswap" ]; then
     mkdir "$VIMHOME/.vimswap"
 fi
-
-git clone git://github.com/billcava/vimrc.git "$VIMHOME"
-cd "$VIMHOME"
-
-ln -s ~/.vim/vimrc ~/.vimrc
 
 echo ".vimrc is installed."
 
