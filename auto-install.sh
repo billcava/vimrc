@@ -2,23 +2,23 @@
 VIMHOME=~/.vim
 
 warn() {
-	    echo "$1" >&2
+    echo "$1" >&2
 }
 
 die() {
-	warn "$1"
-	exit 1
+    warn "$1"
+    exit 1
 }
 
 [ -e "$VIMHOME/vimrc" ] && die "$VIMHOME/vimrc already exists."
 [ -e "~/.vim" ] && die "~/.vim already exists."
 [ -e "~/.vimrc" ] && die "~/.vimrc already exists."
 
-if [ ! -e "~/.vimbackup" ]
-    mkdir "$VIMHOME/.vimbackup"
+if [ ! -e "~/.vimbackup" ]; then
+        mkdir "$VIMHOME/.vimbackup"
 fi
 
-if [ ! -e "~/vimswap" ]
+if [ ! -e "~/vimswap" ]; then
     mkdir "$VIMHOME/.vimswap"
 fi
 
@@ -27,5 +27,5 @@ cd "$VIMHOME"
 
 ln -s ~/.vim/vimrc ~/.vimrc
 
-echo "vimrc is installed."
+echo ".vimrc is installed."
 
