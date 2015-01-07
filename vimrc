@@ -35,3 +35,5 @@ filetype plugin indent on
 " Highlight all search matches
 set hlsearch
 
+" If editing a crontab, need in-place editing
+autocmd FileType crontab setlocal nowritebackup
