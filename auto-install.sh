@@ -15,7 +15,7 @@ die() {
 [ -e "~/.vimrc" ] && die "~/.vimrc already exists."
 
 if [ ! -e "~/.vimbackup" ]; then
-        mkdir "$VIMHOME/.vimbackup"
+    mkdir "$VIMHOME/.vimbackup"
 fi
 
 if [ ! -e "~/vimswap" ]; then

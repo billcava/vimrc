@@ -23,10 +23,10 @@ set spell
 set backup
 
 " Set directories for backups
-set backupdir=$HOME/.vimbackup/
+set backupdir=$HOME/.vim/.vimbackup/
 
 " Set directories for swap file
-set directory=$HOME/.vimswap/
+set directory=$HOME/.vim/.vimswap/
 
 " Copy indent from current line when starting a new line 
 set autoindent
