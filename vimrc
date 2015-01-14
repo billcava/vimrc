@@ -10,6 +10,9 @@ set tabstop=4
 " Let backspace delete indent 
 set softtabstop=4
 
+" Insert space characters whenever the tab key is pressed
+set expandtab
+
 " Enable line numbers
 set number
 
@@ -17,10 +20,10 @@ set number
 set history=1000
 
 " Enable spell checking
-set spell
+" set spell
 
 " Set color of highlighted misspelled word?
-hi SpellBad guibg=#ff2929 ctermbg=224
+" hi SpellBad guibg=#ff2929 ctermbg=224
 " hi SpellBad ctermfg=015 ctermbg=000 cterm=none guifg=#FFFFFF guibg=#000000 gui=none
 
 " Backups are good
